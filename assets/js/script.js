@@ -7,7 +7,8 @@ let opcioncontraseña
 let opcionTablasMultiplicar
 let opcionPrimos
 let opcionfibonacci
-var opcionTemperatura
+let opcionTemperatura
+let opcionPotencia
 
 
 do{
@@ -218,11 +219,13 @@ do{
                 console.log("****** CONVERSION DE TEMPERATURAS ******")
 
                 do{
+                
                    opcionTemperatura = number(prompt("1- Realizar conversión\n2- Salir"))
 
                     switch(opcionTemperatura){
 
-                        case 1: var conversion = number(prompt("1- De celcius a fahrenheit\n2- De fahrenheit a celcius "))
+                        case 1: 
+                        var conversion = number(prompt("1- De celcius a fahrenheit\n2- De fahrenheit a celcius "))
 
                             switch(conversion){
 
@@ -255,7 +258,29 @@ do{
 
                 break;
             case 8:
-                console.log("8")
+                console.log("****** CALCULADORA DE POTENCIAS ******")
+
+                do{
+                
+                    opcionPotencia = number(prompt("1- Realizar calculo\n2- Salir"))
+ 
+                     switch(opcionPotencia){
+ 
+                         case 1: 
+                         var numeroBase = number(prompt("Ingrese el numero base"))
+                         var potencia = number(prompt("Ingrese la pontencia"))
+
+                         console.log("el numero " + numeroBase + " elevad a la potencia " + potencia + " da como resultado " + numeroBase ** potencia)
+ 
+                        break  
+                        
+                        default:  null
+                            break
+                              
+                     }
+ 
+                 }while(opcionPotencia != 2)
+
                 break;
             case 9:
                 console.log("Saliendo")
